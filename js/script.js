@@ -3,6 +3,7 @@ $(function () {
   const $header = $('#header');
   const $visualCon = $('.visual-con');
   const $visualImg = $('.visual-con figure img');
+  const $visualVideo = $('.visual-con video');
 
   visualTL = gsap.timeline();
   visualTL.to($visualCon, {
@@ -11,7 +12,7 @@ $(function () {
     '--clip': '-100px round 0px',
   });
   visualTL.from(
-    $visualImg,
+    $visualVideo,
     {
       duration: 1.8,
       ease: 'power4.inOut',
@@ -49,4 +50,16 @@ $(function () {
     },
     '-=0.5'
   );
+
+  // 마우스 오버했을 때, 서브 메뉴 보이기
+  const $menu = $('.gnb > li');
+  const $subMenu = $('.gnb .submenu');
+  $menu.on('mouseenter', () => {
+    $header.addClass('active');
+    $subMenu.stop().fadeIn(200);
+  });
+  $menu.on('mouseleave', () => {
+    $header.removeClass('active');
+    $subMenu.stop().fadeOut(200);
+  });
 });

@@ -63,6 +63,28 @@ body {
   z-index: 1;
 }
 
+#header.active {
+}
+#header::after {
+  content: '';
+  display: block;
+  background: var(--white);
+  width: 100%;
+  height: 9rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+
+  transition: 0.4s;
+}
+
+#header.active::after {
+  height: 36rem;
+  opacity: 1;
+}
+
 #header nav {
   height: 9rem;
   width: 167.9rem;
@@ -73,20 +95,28 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+#header.active .logo a {
+  background-image: url(../img/logo-black.svg);
+}
 .logo a {
   display: block;
   width: 18rem;
   height: 3.2rem;
   background: red url(../img/logo.svg) no-repeat 50%;
 }
+
 .gnb {
   display: flex;
   height: 100%;
 }
+
 .gnb li {
   height: 100%;
+  position: relative;
 }
-.gnb li a {
+
+.gnb > li > a {
   font-size: 1.8rem;
   font-weight: 600;
   color: var(--white);
@@ -98,11 +128,35 @@ body {
   border: 1px solid #000;
   padding: 0 6.5rem;
 }
+
+.gnb > li > a b {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+.gnb > li > a b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  height: 3px;
+  background: var(--main-color);
+  /* background: var(--main-color); */
+  transition: 0.4s;
+  transform: translateX(-50%);
+}
+#header.active .gnb > li > a {
+  color: var(--black);
+}
+
 .util button {
   width: 5rem;
   height: 5rem;
   border: 1px solid #000;
   background: transparent no-repeat 50%;
+  /* transition: 0.4s; */
 }
 
 .util button.btn-lang {
@@ -114,7 +168,39 @@ body {
 .util button.btn-search {
   background-image: url(../img/ico-search.svg);
 }
+#header.active .util button.btn-lang {
+  background-image: url(../img/ico-lang-black.svg);
+}
+#header.active .util button.btn-user {
+  background-image: url(../img/ico-user-black.svg);
+}
+#header.active .util button.btn-search {
+  background-image: url(../img/ico-search-black.svg);
+}
 
 .util .lang-wrap {
   display: none;
+}
+
+.gnb .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 3.6rem;
+  width: 100%;
+}
+
+.gnb .submenu > li a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--black2);
+  display: block;
+  border: 1px solid #000;
+  width: 100%;
+  padding: 0.8rem 2rem;
+  text-align: center;
+}
+.gnb .submenu > li:hover a {
+  color: var(--main-color2);
+  font-weight: 600;
 }
