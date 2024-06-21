@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>코엑스 아쿠아리움</title>
+
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script src="/js/aos.js"></script>
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./js/jquery-3.7.0.min.js"></script>
+  <script src="./js/script.js"></script>
+</head>
+
+<body>
+  <!-- s: header -->
+  <header id="header">
+    <nav>
+      <h1 class="logo"><a href="#"><i class="hidden">COEX Aquarium</i></a></h1>
+      <ul class="gnb">
+        <li><a href="#">코엑스 아쿠아리움</a></li>
+        <li><a href="#">이용안내</a></li>
+        <li><a href="#">프로그램</a></li>
+        <li><a href="#">입장권</a></li>
+        <li><a href="#">고객 센터</a></li>
+      </ul>
+      <div class="util">
+        <button type="button" class="btn-lang">
+          <i class="hidden">language</i>
+          <ul class="lang-wrap">
+            <li><a href="#">KR</a></li>
+            <li><a href="#">EN</a></li>
+          </ul>
+        </button>
+        <button type="button" class="btn-user"><i class="hidden">user</i></button>
+        <button type="button" class="btn-search"><i class="hidden">search</i></button>
+      </div>
+    </nav>
+  </header>
+  <!-- // e: header -->
+
+  <!-- s: main -->
+  <main id="container">
+    <!-- s: Section 01 : Visual -->
+    <section class="visual">
+      <div class="visual-con">
+        <figure>
+          <img src="./img/shark02.jpg" alt="">
+        </figure>
+      </div>
+      <div class="visual-text">
+        <h2>코엑스 아쿠아리움</h2>
+        <p>365일 즐거움이 넘치는 도심 속 바다!</p>
+      </div>
+    </section>
+    <!-- //e: Section 01 : Visual -->
+
+    <!-- s: Section 02 : notice -->
+    <section class="notice">
+      <div class="inner">
+        <div class="info-wrap">
+          <!-- 01. Notice Part -->
+          <div class="notice-allwrap">
+            <strong>아쿠아리움 소식</strong>
+            <!-- 01-01. 공지 스와이퍼 -->
+            <div class="notice-slide-wrap">
+              <div class="swiper notice-slide">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <span class="notice-badge">이벤트 안내</span>
+                    <p>2023 조개 속 진주 찾기 체험 오픈!</p>
+                    <time datetime="2023-03-26">2023.03.26</time>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="notice-badge">이벤트 안내</span>
+                    <p>2023 조개 속 진주 찾기 체험 오픈!</p>
+                    <time datetime="2023-03-26">2023.03.26</time>
+                  </div>
+                  <div class="swiper-slide">
+                    <span class="notice-badge">이벤트 안내</span>
+                    <p>2023 조개 속 진주 찾기 체험 오픈!</p>
+                    <time datetime="2023-03-26">2023.03.26</time>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 01-02. 더보기 버튼 -->
+            <button type="button" class="btn-more"><i class="hidden">view more</i></button>
+          </div>
+          <div class="hours-allwrap">
+            <strong>운영시간</strong>
+            <p>오전 10시 - 오후 8시</p>
+            <button type="button" class="btn-more"><i class="hidden">view more</i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //e: Section 02 : notice -->
+
+    <!-- s: Section 03 : Program -->
+    <section class="program">
+      <!-- 프로그램 왼쪽 콘텐츠 -->
+      <div class="program-left">
+        <!-- 프로그램 타이틀 -->
+        <div class="section-title">
+          <div>
+            <h2>오늘의 프로그램</h2>
+            <p>코엑스 아쿠아리움에서 <br>
+              볼거리와 즐길거리를 모두 만나보세요!</p>
+          </div>
+          <a href="#" class="btn-detail">자세히 보기</a>
+        </div>
+        <!-- 프로그램 날짜 선택 -->
+        <div class="program-date">
+          <strong class="month-year">6월, 2024년</strong>
+          <div class="day-wrap">
+            <div class="day">
+              <span>목</span>
+              <span>28</span>
+            </div>
+            <div class="day">
+              <span>금</span>
+              <span>29</span>
+            </div>
+            <div class="day">
+              <span>토</span>
+              <span>30</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 프로그램 오른쪽 콘텐츠 -->
+      <div class="program-right">
+        <!-- 스와이퍼 전체 -->
+        <div class="program-slide-wrap">
+          <div class="swiper program-slide">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="slide-text">
+                  <strong class="badge">이벤트</strong>
+                  <h3>‘아쿠아리스트’ 직업체험</h3>
+                  <p>원어민 선생님과 함께 '아쿠아리스트'라는 직업에 대해 알아볼까요?</p>
+                </div>
+                <button type="button" class="btn-more-arr"><i class="hidden">더보기</i></button>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-text">
+                  <strong class="badge">공연 프로그램</strong>
+                  <h3>인어공주 동화 만들기</h3>
+                  <p>안데르센이 들려주는 인어공주와 왕자님의 이야기! 함께 들어볼까요?</p>
+                </div>
+                <button type="button" class="btn-more-arr"><i class="hidden">더보기</i></button>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-text">
+                  <strong class="badge">피딩 프로그램</strong>
+                  <h3>펭귄 생태설명회</h3>
+                  <p>꿈같은 펭귄들의 식사시간! 우리 함께 해요!</p>
+                </div>
+                <button type="button" class="btn-more-arr"><i class="hidden">더보기</i></button>
+              </div>
+            </div>
+            <div class="btn-wrap">
+              <button type="button" class="btn-prev"><i class="hidden">이전</i></button>
+              <button type="button" class="btn-next"><i class="hidden">다음</i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //e: Section 03 : Program -->
+
+    <!-- s: Section 04: Ticket -->
+    <section class="ticket">
+      <div class="inner">
+        <div class="ticket-left">
+          <div class="section-title">
+            <div>
+              <h2>오늘의 프로그램</h2>
+              <p>코엑스 아쿠아리움에서 <br>
+                볼거리와 즐길거리를 모두 만나보세요!</p>
+            </div>
+            <a href="#" class="btn-detail">자세히 보기</a>
+          </div>
+        </div>
+        <div class="ticket-right">
+          <ul class="ticket-list">
+            <li>
+              <a href="#">
+                <span class="ticket-badge">Day</span>
+                <div class="ticket-info">
+                  <div class="name">
+                    <p>일일 입장권</p>
+                    <p>성인(13세 이상)</p>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="discount">
+                      <span>21%</span>
+                      <span>33,000원</span>
+                    </div>
+                    <div class="price">
+                      <span>온라인 할인 혜택가</span>
+                      <span>26,000원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arr-area"></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="ticket-badge">Day</span>
+                <div class="ticket-info">
+                  <div class="name">
+                    <p>일일 입장권</p>
+                    <p>어린이(36개월 이상-12세 이하)</p>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="discount">
+                      <span>20%</span>
+                      <span>29,000원</span>
+                    </div>
+                    <div class="price">
+                      <span>온라인 할인 혜택가</span>
+                      <span>23,000원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arr-area"></div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="ticket-badge">Day</span>
+                <div class="ticket-info">
+                  <div class="name">
+                    <p>연간 회원권</p>
+                  </div>
+                  <div class="price-wrap">
+                    <div class="price">
+                      <span>대/소 공통</span>
+                      <span>150,000원</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arr-area"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- //e: Section 04: Ticket -->
+
+    <section class="promotion">
+      <div class="inner">
+        <div class="promotion-wrap">
+          <!-- 프로모션 왼쪽 콘텐츠 -->
+          <div class="promotion-left">
+            <div class="section-title">
+              <div>
+                <h2>혜택 프로모션</h2>
+                <p>코엑스 아쿠아리움이 제공하는 다양한 제휴 할인 혜택을 만나보세요! <br>
+                  통신사 할인부터 카드사 할인, 다양한 기타 제휴할인까지!</p>
+              </div>
+            </div>
+            <ul class="tab-menu">
+              <li><strong>이달의 할인</strong></li>
+              <li><strong>우대</strong></li>
+              <li><strong>통신사 카드/제휴</strong></li>
+            </ul>
+          </div>
+          <!-- 프로모션 오른쪽 콘텐츠 -->
+          <div class="promotion-right">
+            <!-- 첫번째 탭 콘텐츠 : 이달의 할인 -->
+            <div class="tab-con monthly-discount">
+              <figure>
+                <img src="./img/water_tank04.jpg" alt="">
+              </figure>
+              <div class="monthly-discount-text">
+                <strong class="discount-badge">30%<b>OFF</b></strong>
+                <div class="monthly-discount-title">
+                  <span>이달의 할인</span>
+                  <p>하루 중 <br>
+                    가장 오붓한 시간</p>
+                </div>
+                <div class="monthly-discount-price">
+                  <p>18시 이후 현장매표 성인 2인</p>
+                  <p>46,200원</p>
+                </div>
+              </div>
+            </div>
+            <!-- 두번째 탭 콘텐츠 : 우대 -->
+            <div class="tab-con special-treatment">
+              <button type="button" class="btn-more-arr"><i class="hidden">더보기</i></button>
+              <ul class="treatment-list">
+                <li>
+                  <strong class="small-badge">30%<b>OFF</b></strong>
+                  <div class="treatment-info">
+                    <strong>장애인 복지카드 우대</strong>
+                    <p>장애인 복지카드 제시 시 본인 및 동반 3인까지 30%할인</p>
+                  </div>
+                </li>
+                <li>
+                  <strong class="small-badge">30%<b>OFF</b></strong>
+                  <div class="treatment-info">
+                    <strong>경로 우대</strong>
+                    <p>65세 이상 확인 가능한 신분증, 문서 제시 시 본인 30%할인</p>
+                  </div>
+                </li>
+                <li>
+                  <strong class="small-badge">30%<b>OFF</b></strong>
+                  <div class="treatment-info">
+                    <strong>국가 유공자 우대</strong>
+                    <p>국가 유공자 확인 가능한 신분증/서류 제시 시 본인 및 동반 3인까지 30%할인</p>
+                  </div>
+                </li>
+                <li>
+                  <strong class="small-badge">30%<b>OFF</b></strong>
+                  <div class="treatment-info">
+                    <strong>군인 및 군무원 우대</strong>
+                    <p>장병 휴가증 및 군무원증 제시 시 본인 및 동반 3인까지 30%할인</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 세번째 탭 콘텐츠 : 통신사 카드/제휴 -->
+            <div class="tab-con card-promo">
+              <button type="button" class="btn-more-arr"><i class="hidden">더보기</i></button>
+              <ul class="card-promo-list">
+                <li>
+                  <strong class="small-badge">카드</strong>
+                  <div class="card-promo-info">
+                    <strong>비씨카드 포인트 결제</strong>
+                    <p>BC TOP포인트 청구 차감 결제 (최대 100%) <br>
+                      * 법인/선불/기프트카드/NonBC/가족카드 제외</p>
+                  </div>
+                </li>
+                <li>
+                  <strong class="small-badge">통신사</strong>
+                  <div class="card-promo-info">
+                    <strong>KT 멤버십 할인</strong>
+                    <p>멤버십 바코드 제시 본인 및 동반 3인까지 10%할인 (멤버십 포인트 1,000p 차감)<br>
+                      * 1일 1회에 한함</p>
+                  </div>
+                </li>
+                <li>
+                  <strong class="small-badge">제휴</strong>
+                  <div class="card-promo-info">
+                    <strong>아시아나 항공 제휴 할인</strong>
+                    <p>아시아나 클럽 멤버십 카드 또는 아시아나 항공 항공권(매직 보딩 패스) 제시 시 <br>
+                      본인 및 동반 3인까지 30%할인</p>
+                  </div>
+                </li>
+                <li>
+                  <strong class="small-badge">카드</strong>
+                  <div class="card-promo-info">
+                    <strong>KB 국민카드 포인트 결제</strong>
+                    <p>KB스타샵 포인트 청구 차감 결제 (최대 100%). 매표소 결제시 포인트 사용 요청.<br>
+                      * KB국민, 비씨카드/선불카드 적립 및 포인트 결제 제외, KB국민 기업카드 적립만 가능</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- // e: main -->
+
+  <!-- s: footer -->
+  <footer id="footer">
+    <div class="foot-left">
+      <div class="foot-info">
+        <h1 class="foot-logo"><i class="hidden">로고</i></h1>
+        <div class="foot-detail">
+          <p>서울특별시 강남구 영동대로 513 코엑스아쿠아리움</p>
+          <p>
+            <span>대표이사</span>
+            <span>이성호</span>
+            <span>사업자등록번호</span>
+            <span>211-86-49403</span>
+            <span>(주)서울오션아쿠아리움</span>
+          </p>
+          <p>
+            <span>대표전화</span>
+            <span>02-700-7200</span>
+            <span>팩스</span>
+            <span>02-700-7299</span>
+            <span>통신판매업신고</span>
+            <span>2014-서울강남-00715호</span>
+          </p>
+        </div>
+      </div>
+      <ul class="policy-list">
+        <li><a href="#">정책</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보 처리방침</a></li>
+        <li><a href="#">개인정보 수집 및 처리에 대한 동의</a></li>
+      </ul>
+    </div>
+    <div class="foot-right">
+      <ul class="foot-gnb">
+        <li>
+          <a href="#">코엑스 아쿠아리움</a>
+          <ul class="submenu">
+            <li><a href="#">코엑스 아쿠아리움 소개 </a></li>
+            <li><a href="#">코엑스 아쿠아리움 친구들</a></li>
+            <li><a href="#">아쿠아리움 테마존</a></li>
+            <li><a href="#">공지사항</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">이용안내</a>
+          <ul class="submenu">
+            <li><a href="#">운영시간</a></li>
+            <li><a href="#">가이드맵</a></li>
+            <li><a href="#">편의시설</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">프로그램</a>
+          <ul class="submenu">
+            <li><a href="#">공연 프로그램</a></li>
+            <li><a href="#">피딩 프로그램</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">입장권</a>
+          <ul class="submenu">
+            <li><a href="#">일반 입장권</a></li>
+            <li><a href="#">단체 입장권</a></li>
+            <li><a href="#">혜택 프로모션</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">고객센터</a>
+          <ul class="submenu">
+            <li><a href="#">1:1 문의하기</a></li>
+            <li><a href="#">자주 묻는 질문</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="family-sns-wrap">
+        <div class="family-site">
+          패밀리 사이트
+          <ul>
+            <li><a href="https://www.merlinentertainments.biz/" target="_blank">MERLIN ENTERTAINMENTS</a></li>
+            <li><a href="https://www.sealifetrust.org/en/" target="_blank">SEA LIFE TRUST</a></li>
+            <li><a href="https://www.coex.co.kr/" target="_blank">COEX</a></li>
+          </ul>
+        </div>
+        <ul class="sns-list">
+          <li><a href="#"><i class="hidden">facebook</i></a></li>
+          <li><a href="#"><i class="hidden">instagram</i></a></li>
+          <li><a href="#"><i class="hidden">youtube</i></a></li>
+          <li><a href="#"><i class="hidden">naver blog</i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <!-- // e: footer -->
+
+</body>
+
+</html>

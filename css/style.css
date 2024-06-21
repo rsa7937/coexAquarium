@@ -1,0 +1,55 @@
+/* Section 01. Visual */
+.visual {
+  position: relative;
+}
+.visual-con {
+  height: 92rem;
+  width: 100%;
+
+  --clip: 100px round 20px;
+  /* clip-path: inset(0 0 0 0); */
+  clip-path: inset(var(--clip));
+}
+.visual-con figure {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+.visual-con::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.visual-con img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.visual-text {
+  position: absolute;
+  bottom: 0;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
+  color: var(--white1);
+}
+.visual-text h2 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+.visual-text p {
+  font-size: 2.4rem;
+  font-weight: 400;
+  margin-top: -1rem;
+}
+
+/* Section 02. Notice */

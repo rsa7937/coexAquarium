@@ -1,0 +1,120 @@
+@charset 'utf-8';
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+:root {
+  font-size: 62.5%;
+
+  /* color */
+  --black: #111;
+  --black2: #666;
+  --white: #fff;
+  --white1: #fafafa;
+  --white2: rgba(255, 255, 255, 0.9);
+
+  --main-color: #4b52de;
+  --main-color2: #282d8c;
+
+  --point-color: #e86f37;
+
+  --line: #ddd;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--main-color2);
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--main-color);
+  color: var(--white1);
+}
+
+hr,
+.hidden {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+body {
+  font: 1.6rem/1.6 'Pretendard', sans-serif;
+  color: var(--black);
+  word-break: keep-all;
+  letter-spacing: -0.05rem;
+  overflow-x: hidden;
+}
+
+#header {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  border: 1px solid #000;
+  z-index: 1;
+}
+
+#header nav {
+  height: 9rem;
+  width: 167.9rem;
+  /* width: 87.4479%; */
+  /* border: 1px solid #000; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo a {
+  display: block;
+  width: 18rem;
+  height: 3.2rem;
+  background: red url(../img/logo.svg) no-repeat 50%;
+}
+.gnb {
+  display: flex;
+  height: 100%;
+}
+.gnb li {
+  height: 100%;
+}
+.gnb li a {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white);
+
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  border: 1px solid #000;
+  padding: 0 6.5rem;
+}
+.util button {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid #000;
+  background: transparent no-repeat 50%;
+}
+
+.util button.btn-lang {
+  background-image: url(../img/ico-lang.svg);
+}
+.util button.btn-user {
+  background-image: url(../img/ico-user.svg);
+}
+.util button.btn-search {
+  background-image: url(../img/ico-search.svg);
+}
+
+.util .lang-wrap {
+  display: none;
+}
