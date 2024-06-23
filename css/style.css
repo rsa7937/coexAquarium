@@ -54,3 +54,165 @@
 }
 
 /* Section 02. Notice */
+.inner {
+  width: 152rem;
+  margin: 0 auto;
+  background: rgba(255, 255, 0, 0.1);
+}
+
+.notice {
+  padding: 4rem 0;
+}
+
+.info-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.info-wrap strong {
+  font-weight: 700;
+  font-size: 1.8rem;
+  position: relative;
+  display: block;
+  /* border: 1px solid #000; */
+}
+.info-wrap .notice-allwrap strong::after {
+  content: '';
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--main-color);
+
+  position: absolute;
+  top: -0.3rem;
+  right: -0.6rem;
+}
+/*  01-01. 공지 스와이퍼 */
+.notice-allwrap {
+  display: flex;
+  gap: 8.4rem;
+  align-items: center;
+  /* border: 1px solid #000; */
+}
+.notice-slide-wrap {
+  width: 50rem;
+  overflow: hidden;
+  height: 5rem;
+  position: relative;
+}
+.notice-slide {
+  height: 5rem;
+  height: 100%;
+}
+.notice-slide .swiper-slide a {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 4.8rem;
+  /* border: 1px solid #000; */
+}
+.notice-slide .swiper-slide .notice-badge {
+  padding: 0.5rem 1.2rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 2rem;
+}
+.notice-slide .swiper-slide p {
+  font-weight: 500;
+}
+.notice-slide .swiper-slide time {
+  margin-left: auto;
+  color: var(--black2);
+}
+.btn-more {
+  width: 5rem;
+  height: 5rem;
+  background: transparent url(../img/ico-plus.svg) no-repeat 50%;
+}
+
+.hours-allwrap {
+  display: flex;
+  gap: 8.4rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 3rem;
+}
+
+/* Section 03 : Program */
+.program {
+  padding: 15rem 0 15rem 20rem;
+}
+.program-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-title h2 {
+  font-size: 5.2rem;
+  font-weight: 700;
+}
+.section-title p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+.section-title .btn-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 4rem;
+  border: 1.5px solid #000;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 4rem;
+  transition: 0.4s;
+}
+
+.section-title .btn-detail:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.section-title .btn-detail::after {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background: url(../img/ico-more-arr.svg) no-repeat 50%;
+}
+.section-title .btn-detail:hover::after {
+  background-image: url(../img/ico-more-arr-white.svg);
+}
+.program-date {
+  margin-top: 8rem;
+}
+
+.program-date .month-year {
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+.day-wrap {
+  display: flex;
+  gap: 5.2rem;
+}
+.day-wrap .day {
+  display: flex;
+  flex-direction: column;
+  gap: -2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.day-wrap .day span:first-of-type {
+  font-size: 2rem;
+  border: 1px solid #000;
+  font-weight: 600;
+}
+.day-wrap .day span:last-of-type {
+  font-size: 6rem;
+  font-weight: 700;
+  border: 1px solid #000;
+  margin-top: -2rem;
+}

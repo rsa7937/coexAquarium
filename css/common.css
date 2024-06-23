@@ -51,7 +51,7 @@ body {
   color: var(--black);
   word-break: keep-all;
   letter-spacing: -0.05rem;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 #header {
@@ -59,7 +59,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   z-index: 1;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 #header.active::after {
-  height: 36rem;
+  height: 34rem;
   opacity: 1;
 }
 
@@ -103,7 +103,7 @@ body {
   display: block;
   width: 18rem;
   height: 3.2rem;
-  background: red url(../img/logo.svg) no-repeat 50%;
+  background: url(../img/logo.svg) no-repeat 50%;
 }
 
 .gnb {
@@ -125,8 +125,12 @@ body {
   align-items: center;
 
   height: 100%;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   padding: 0 6.5rem;
+}
+#header.active .gnb > li > a {
+  color: var(--black);
+  font-weight: 700;
 }
 
 .gnb > li > a b {
@@ -140,15 +144,16 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 100%;
+  width: 0%;
   height: 3px;
   background: var(--main-color);
   /* background: var(--main-color); */
   transition: 0.4s;
   transform: translateX(-50%);
 }
-#header.active .gnb > li > a {
-  color: var(--black);
+
+.gnb > li.on > a b::after {
+  width: 100%;
 }
 
 .util button {
@@ -186,21 +191,22 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  margin-top: 3.6rem;
+  padding-top: 3.6rem;
   width: 100%;
+  display: none;
 }
 
 .gnb .submenu > li a {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: var(--black2);
   display: block;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   width: 100%;
   padding: 0.8rem 2rem;
   text-align: center;
 }
 .gnb .submenu > li:hover a {
-  color: var(--main-color2);
+  color: var(--main-color);
   font-weight: 600;
 }

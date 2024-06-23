@@ -54,12 +54,38 @@ $(function () {
   // 마우스 오버했을 때, 서브 메뉴 보이기
   const $menu = $('.gnb > li');
   const $subMenu = $('.gnb .submenu');
-  $menu.on('mouseenter', () => {
+
+  $menu.on('mouseenter', function () {
+    const menuIdx = $(this).index();
+    $menu.removeClass('on').eq(menuIdx).addClass('on');
+    $subMenu.find('li').removeClass('on').eq(menuIdx).addClass('on');
+
     $header.addClass('active');
     $subMenu.stop().fadeIn(200);
   });
+
   $menu.on('mouseleave', () => {
+    $menu.removeClass('on');
+    $subMenu.find('li').removeClass('on');
+
     $header.removeClass('active');
     $subMenu.stop().fadeOut(200);
+  });
+
+  //  Section 02 : notice 공지 스와이퍼
+  const noticeSlide = new Swiper('.notice-slide', {
+    speed: 500,
+    loop: true,
+    loopedSlides: 3,
+    direction: 'vertical',
+
+    autoplay: { delay: 2000, disableOnInteraction: false },
+
+    // centeredSlides: true,
+
+    // slideToClickedSlide: true,
+
+    slidesPerView: 1,
+    // spaceBetween: 20,
   });
 });
