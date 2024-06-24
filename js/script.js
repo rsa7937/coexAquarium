@@ -88,4 +88,36 @@ $(function () {
     slidesPerView: 1,
     // spaceBetween: 20,
   });
+
+  // Section 03 : Program 날짜 스와이퍼
+  const daySlider = new Swiper('.day-slider', {
+    speed: 500,
+    // loop: true,
+    loopedSlides: 6,
+
+    // centeredSlides: true,
+
+    slideToClickedSlide: true,
+
+    slidesPerView: 3,
+    spaceBetween: 24,
+  });
+  // Section 03 : Program 프로그램 스와이퍼
+  const programSlider = new Swiper('.program-slide', {
+    speed: 500,
+    // loop: true,
+    loopedSlides: 6,
+
+    // centeredSlides: true,
+
+    slideToClickedSlide: true,
+
+    slidesPerView: 3.5,
+    spaceBetween: 24,
+
+    navigation: {
+      nextEl: '.btn-next',
+      prevEl: '.btn-prev',
+    },
+  });
 });
