@@ -90,7 +90,7 @@ body {
 #header nav {
   height: 9rem;
   width: 167.9rem;
-  /* width: 87.4479%; */
+  width: 87.4479%;
   /* border: 1px solid #000; */
   margin: 0 auto;
   display: flex;
@@ -211,4 +211,25 @@ body {
 .gnb .submenu > li:hover a {
   color: var(--main-color);
   font-weight: 600;
+}
+
+/* Footer */
+#footer {
+  background: var(--black);
+  padding: 8rem 0;
+  color: var(--white);
+}
+
+/* foot-left */
+#footer .foot-info .foot-logo a {
+  display: block;
+  border: 1px solid #fff;
+  width: 25.1rem;
+  height: 4.5rem;
+  background: transparent url(../img/logo.svg) no-repeat 50% / contain;
+}
+#footer .foot-info .foot-detail {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  font-weight: 400;
 }

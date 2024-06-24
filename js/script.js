@@ -120,4 +120,17 @@ $(function () {
       prevEl: '.btn-prev',
     },
   });
+
+  // Section 05 : Promotion
+  const $promotionList = $('.tab-menu > li');
+  const $tabconList = $('.promotion-right > div');
+
+  $promotionList.eq(0).addClass('active');
+  $tabconList.eq(0).addClass('active');
+
+  $promotionList.on('mouseenter', function () {
+    const promotionListIdx = $(this).index();
+    $promotionList.removeClass('active').eq(promotionListIdx).addClass('active');
+    $tabconList.removeClass('active').eq(promotionListIdx).addClass('active');
+  });
 });
