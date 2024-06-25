@@ -61,6 +61,7 @@ body {
   width: 100%;
   /* border: 1px solid #000; */
   z-index: 10;
+  transition: 0.4s;
 }
 
 #header.active {
@@ -98,14 +99,21 @@ body {
   justify-content: space-between;
 }
 
-#header.active .logo a {
+#header.active .logo a,
+#header.whitebg .logo a {
   background-image: url(../img/logo-black.svg);
 }
+#header.whitebg {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
 .logo a {
   display: block;
   width: 18rem;
   height: 3.2rem;
   background: url(../img/logo.svg) no-repeat 50%;
+  transition: 0.4s;
 }
 
 .gnb {
@@ -130,7 +138,8 @@ body {
   /* border: 1px solid #000; */
   padding: 0 6.5rem;
 }
-#header.active .gnb > li > a {
+#header.active .gnb > li > a,
+#header.whitebg .gnb > li > a {
   color: var(--black);
   font-weight: 700;
 }
@@ -161,7 +170,7 @@ body {
 .util button {
   width: 5rem;
   height: 5rem;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   background: transparent no-repeat 50%;
   /* transition: 0.4s; */
 }
@@ -175,13 +184,16 @@ body {
 .util button.btn-search {
   background-image: url(../img/ico-search.svg);
 }
-#header.active .util button.btn-lang {
+#header.active .util button.btn-lang,
+#header.whitebg .util button.btn-lang {
   background-image: url(../img/ico-lang-black.svg);
 }
-#header.active .util button.btn-user {
+#header.active .util button.btn-user,
+#header.whitebg .util button.btn-user {
   background-image: url(../img/ico-user-black.svg);
 }
-#header.active .util button.btn-search {
+#header.active .util button.btn-search,
+#header.whitebg .util button.btn-search {
   background-image: url(../img/ico-search-black.svg);
 }
 
@@ -197,15 +209,22 @@ body {
   width: 100%;
   display: none;
 }
+.gnb .submenu > li {
+  /* border: 1px solid #000; */
+  text-align: center;
+}
 
 .gnb .submenu > li a {
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--black2);
-  display: block;
+  display: inline-block;
+
+  margin: 0 auto;
+  text-align: center;
   /* border: 1px solid #000; */
-  width: 100%;
-  padding: 0.8rem 2rem;
+  /* width: 100%; */
+
   text-align: center;
 }
 .gnb .submenu > li:hover a {
@@ -213,23 +232,194 @@ body {
   font-weight: 600;
 }
 
+.gnb > li > .submenu > li a b {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+  /* border: 1px solid #000; */
+
+  /* padding: 0.6rem 2rem; */
+  padding: 1rem 0;
+  /* padding: 0.8rem 0; */
+}
+.gnb > li > .submenu > li a b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: var(--main-color);
+  /* background: var(--main-color); */
+  transition: 0.4s;
+  transform: translateX(-50%);
+}
+.gnb > li > .submenu > li:hover a b::after {
+  width: 100%;
+}
+
 /* Footer */
 #footer {
   background: var(--black);
-  padding: 8rem 0;
+  padding: 12rem 0;
+  height: 72rem;
   color: var(--white);
 }
-
+#footer > .inner {
+  height: 100%;
+}
+#footer .footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
 /* foot-left */
+#footer .foot-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 #footer .foot-info .foot-logo a {
   display: block;
-  border: 1px solid #fff;
+  /* border: 1px solid #fff; */
   width: 25.1rem;
   height: 4.5rem;
   background: transparent url(../img/logo.svg) no-repeat 50% / contain;
 }
 #footer .foot-info .foot-detail {
   margin-top: 3rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+#footer .foot-info .foot-detail p {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#footer .foot-info .foot-detail p span:nth-child(even) {
+  display: block;
+  width: 0.1rem;
+  height: 1.2rem;
+  background: var(--white);
+  opacity: 0.6;
+}
+#footer .foot-info .foot-detail p span {
+  font-weight: 300;
+}
+#footer .foot-info .foot-detail p span b {
+  padding-right: 0.8rem;
+  font-weight: 600;
+}
+#footer .policy-list {
+  display: flex;
+  font-size: 1.8rem;
+  gap: 5.2rem;
+}
+
+#footer .policy-list li a b {
+  font-weight: 700;
+}
+
+#footer .foot-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#footer .foot-right .foot-gnb {
+  display: flex;
+  gap: 10rem;
+  font-size: 1.8rem;
+}
+#footer .foot-right .foot-gnb > li > a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#footer .foot-right .foot-gnb .submenu {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.family-sns-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: flex-end;
+}
+.family-site {
+  font-size: 1.8rem;
+  width: 30rem;
+  height: 6.4rem;
+  padding: 1.5rem 3rem;
+  background: #202020;
+  color: var(--white);
+  border: 1px solid #2d2d2d;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.family-site::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../img/ico-plus-white.svg);
+}
+.family-site ul {
+  position: absolute;
+  top: -18rem;
+  left: 0%;
+  width: 100%;
+  border: 1px solid #424242;
+  display: none;
+}
+.family-site ul li a {
+  font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  width: 100%;
+  height: 6rem;
+  background: #2d2d2d;
+  transition: 0.4s;
+  border-bottom: 1px solid #424242;
+}
+.family-site ul li:last-child a {
+  border-bottom: none;
+}
+.family-site ul li:hover a {
+  color: var(--white);
+  background: var(--main-color2);
+}
+
+.sns-list {
+  display: flex;
+  gap: 1.6rem;
+}
+.sns-list li a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--white) no-repeat 50%;
+}
+.sns-list li:nth-child(1) a {
+  background-image: url(../img/ico-sns-1.svg);
+}
+.sns-list li:nth-child(2) a {
+  background-image: url(../img/ico-sns-2.svg);
+}
+.sns-list li:nth-child(3) a {
+  background-image: url(../img/ico-sns-3.svg);
+}
+.sns-list li:nth-child(4) a {
+  background-image: url(../img/ico-sns-4.svg);
 }

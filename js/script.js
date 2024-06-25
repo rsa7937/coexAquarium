@@ -1,11 +1,14 @@
 $(function () {
   // 로딩했을 때 보이는 비주얼 애니메이션
+  const $window = $(window);
   const $header = $('#header');
   const $visualCon = $('.visual-con');
   const $visualImg = $('.visual-con figure img');
   const $visualVideo = $('.visual-con video');
 
-  visualTL = gsap.timeline();
+  const visualTL = gsap.timeline();
+  gsap.set($header, { y: -100, autoAlpha: 1 });
+
   visualTL.to($visualCon, {
     duration: 2,
     ease: 'power4.inOut',
@@ -20,26 +23,23 @@ $(function () {
     },
     '<'
   );
-  visualTL.from(
+  visualTL.to(
     $header,
     {
       duration: 1,
       ease: 'power4.inOut',
-      yPercent: -90,
-      autoAlpha: 0,
+      y: 0,
+      autoAlpha: 1,
     },
-    '-=1.2'
+    '-=1'
   );
-  visualTL.from(
-    '.visual-text h2',
-    {
-      duration: 0.8,
-      ease: 'power4.inOut',
-      autoAlpha: 0,
-      y: 20,
-    },
-    '-=0.5'
-  );
+
+  visualTL.from('.visual-text h2', {
+    duration: 0.8,
+    ease: 'power4.inOut',
+    autoAlpha: 0,
+    y: 20,
+  });
   visualTL.from(
     '.visual-text p',
     {
@@ -70,6 +70,36 @@ $(function () {
 
     $header.removeClass('active');
     $subMenu.stop().fadeOut(200);
+  });
+
+  // let scrollTop = $window.scrollTop();
+
+  // function headerbgWhite() {
+  //   const visualHeight = $('.visual').outerHeight();
+  //   if (scrollTop >= visualHeight) {
+  //     $header.addClass('whitebg');
+  //   } else {
+  //     $header.removeClass('whitebg');
+  //   }
+  // }
+  // headerbgWhite();
+  // $window.on('resize', function () {
+  //   headerbgWhite();
+  // });
+
+  // $window.on('scroll', function () {
+  //   scrollTop = $(this).scrollTop();
+  //   headerbgWhite();
+  // });
+
+  ScrollTrigger.create({
+    trigger: '.visual',
+    // markers: true,
+    id: 'header-white',
+    start: 'top 100%',
+    end: 'bottom 50px',
+    onLeave: () => $('#header').addClass('whitebg'),
+    onEnterBack: () => $('#header').removeClass('whitebg'),
   });
 
   //  Section 02 : notice 공지 스와이퍼
@@ -132,5 +162,16 @@ $(function () {
     const promotionListIdx = $(this).index();
     $promotionList.removeClass('active').eq(promotionListIdx).addClass('active');
     $tabconList.removeClass('active').eq(promotionListIdx).addClass('active');
+  });
+
+  // footer
+
+  // Family Site
+  $('.family-site').on('click', function () {
+    $('.family-site > ul').toggle();
+  });
+
+  $('.family-site > ul > li').on('click', function () {
+    $('.family-site > ul').hide();
   });
 });
