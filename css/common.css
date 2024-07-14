@@ -46,6 +46,7 @@ hr,
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
 }
+
 body {
   font: 1.6rem/1.6 'Pretendard', sans-serif;
   color: var(--black);
@@ -106,6 +107,7 @@ body {
 #header.whitebg {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(5px);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.03);
 }
 
 .logo a {
