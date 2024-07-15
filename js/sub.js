@@ -31,7 +31,7 @@ $(function () {
   });
 
   // ScrollTrigger.create({
-  //   trigger: '.visual',
+  //   trigger: '.sub-visual',
   //   // markers: true,
   //   id: 'header-white',
   //   start: 'top 100%',
@@ -39,6 +39,31 @@ $(function () {
   //   onLeave: () => $('#header').addClass('whitebg'),
   //   onEnterBack: () => $('#header').removeClass('whitebg'),
   // });
+
+  $('.btn-back').on('click', function () {
+    window.location.href = './sub-coexFriends.html';
+  });
+  const swiper = new Swiper('.friend-info-slide', {
+    // Optional parameters
+    speed: 500,
+    // autoplay: { delay: 500, disableOnInteraction: false },
+    // centeredSlides: true,
+    spaceBetween: 30,
+    slideToClickedSlide: true,
+    slidesPerView: 3.5,
+
+    slidesOffsetAfter: 40,
+
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.shark-scrollbar',
+      draggable: true,
+      snapOnRelease: true,
+    },
+
+    observer: true,
+    observeParents: true,
+  });
 
   // footer
 

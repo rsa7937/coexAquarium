@@ -144,6 +144,7 @@ $(function () {
 
     slidesPerView: 3.5,
     spaceBetween: 24,
+    slidesOffsetAfter: 40,
 
     navigation: {
       nextEl: '.btn-next',
